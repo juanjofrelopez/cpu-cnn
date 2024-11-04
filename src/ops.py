@@ -1,18 +1,13 @@
 import numpy as np
 
 
-def matmul(a: np.ndarray, b: np.ndarray) -> float:
-    a_f = a.flatten()
-    b_f = b.flatten()
-    c = np.dot(a_f, b_f)
-    return c
-
-
 def matloop(output_size, a, b, c, b_size):
     for i in range(output_size):
         for j in range(output_size):
             a_i = a[i : i + b_size, j : j + b_size]
-            c[i, j] = matmul(a_i, b)
+            a_f = a_i.flatten()
+            b_f = b.flatten()
+            c[i, j] = np.dot(a_f, b_f)
     return c
 
 
