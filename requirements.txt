@@ -1,3 +1,5 @@
 numpy
 python-mnist
 progress
+numba
+scipy

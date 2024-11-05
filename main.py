@@ -10,7 +10,7 @@ from src.dense import Dense
 from src.train import train, predict
 
 IMAGE_SIZE = 28
-TRAINING_SET_SIZE = 10000
+TRAINING_SET_SIZE = 1000
 TEST_SET_SIZE = 10
 N_CLASSES = 10
 EPOCHS = 20

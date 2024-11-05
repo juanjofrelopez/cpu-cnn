@@ -1,6 +1,8 @@
 import numpy as np
+from numba import njit
 
 
+@njit
 def matloop(output_size, a, b, c, b_size):
     for i in range(output_size):
         for j in range(output_size):
