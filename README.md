@@ -1,6 +1,6 @@
 # CNN from scratch
 
-This is just a simple deep learning "framework" that implements some layers from scratch using only numpy as a dependency.
+This is just a simple deep learning "framework" that implements some layers from scratch using only numpy as a dependency. The goal was to learn the math inside a very simple neural network architecture with conv layers, fully connected layers, ReLU, etc. I hope that somebody can find this useful.
 
 It also includes a numba `njit` decorator to improve CPU performance by a lot (keep reading to find out by how much).
 
