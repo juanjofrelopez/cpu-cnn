@@ -27,53 +27,10 @@ python main.py
 ### Layers implemented so far 🎂
 
 - Convolutional
-
-  - forward
-
-    $Z^{[l]}_{h,w,c} = \sum_{i=0}^{k-1} \sum_{j=0}^{k-1} \sum_{c'} W^{[l]}_{i,j,c',c} \cdot A^{[l-1]}_{sh+i,sw+j,c'} + b^{[l]}_c$
-
-  - backward
-
-    $\frac{\partial L}{\partial W^{[l]}} = \sum_{h,w} \frac{\partial L}{\partial Z^{[l]}_{h,w}} \cdot A^{[l-1]}_{sh+i,sw+j}$
-
-    $\frac{\partial L}{\partial b^{[l]}} = \sum_{h,w} \frac{\partial L}{\partial Z^{[l]}_{h,w}}$
-
-    $\frac{\partial L}{\partial A^{[l-1]}} = \sum_{h,w} W^{[l]} * \frac{\partial L}{\partial Z^{[l]}_{h,w}}$
-
 - Dense
-  - forward
-  - backward
 - Max Pooling
-
-  - forward
-
-    $P^{[l]}_{h,w,c} = \max_{i,j \in k×k} A^{[l-1]}_{sh+i,sw+j,c}$
-
-  - backward
-
-    $\frac{\partial L}{\partial A^{[l-1]}_{i,j,c}} = \frac{\partial L}{\partial P^{[l]}_{h,w,c}} \cdot \mathbb{1}(A^{[l-1]}_{i,j,c} = \max_{i',j' \in k×k} A^{[l-1]}_{i',j',c})$
-
 - ReLU
-
-  - forward
-
-    $A^{[l]} = \max(0, Z^{[l]})$
-
-  - backward
-
-    $\frac{\partial L}{\partial Z^{[l]}} = \frac{\partial L}{\partial A^{[l]}} ⊙ \mathbb{1}(Z^{[l]} > 0)$
-
 - Softmax classifier
-
-  - loss
-
-    $P(y=j|Z^{[L]}) = \frac{e^{Z^{[L]}_j}}{\sum_{k=1}^K e^{Z^{[L]}_k}}$
-
-    $L = -\sum_{j=1}^K y_j \log(P(y=j|Z^{[L]}))$
-
-  - backward
-
-    $\frac{\partial L}{\partial Z^{[L]}_i} = P(y=i|Z^{[L]}) - y_i$
 
 ### MNIST CNN example 🔬🧪
 
@@ -232,5 +189,6 @@ Somehow adding the option `parallel=True` made the performance worst, maybe beca
 
 ## maybe in the future
 
+- [ ] adam
 - [ ] dropdown layer
 - [ ] resnet
