@@ -189,6 +189,7 @@ Somehow adding the option `parallel=True` made the performance worst, maybe beca
 
 ## maybe in the future
 
+- [ ] Batch Norm
 - [ ] adam
 - [ ] dropdown layer
 - [ ] resnet
