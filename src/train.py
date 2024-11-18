@@ -1,4 +1,4 @@
-from numpy import ndarray
+import numpy as np
 import time
 from progress.bar import Bar
 
@@ -10,8 +10,8 @@ def train(
     network: list[Layer],
     epochs: int,
     learning_rate: float,
-    input_data: ndarray,
-    labels: ndarray,
+    input_data: np.ndarray,
+    labels: np.ndarray,
     loss=softmax,
 ):
     for i in range(epochs):
