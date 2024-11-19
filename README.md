@@ -184,7 +184,7 @@ Somehow adding the option `parallel=True` made the performance worst, maybe beca
 - [x] better params initialization (Xavier)
 - [x] train basic classifier on dataset
 - [x] better error measurement
-- [ ] plot error vs epochs
+- [ ] plot loss vs epochs
 - [ ] input args from console for the main script
 
 ## maybe in the future
